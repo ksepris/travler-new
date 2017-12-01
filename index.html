@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Travler</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
@@ -12,25 +13,23 @@
             <img src="img/header_logo.png" alt="">
           </div>
           <div class="search_block">
-            <!-- не совсем понял как работает этот блок, справа select список, а слева что -->
-            <div class="quicklinks">
-
-            </div>
-            <div class="search_input">
-              <form action="https://echo.htmlacademy.ru" method="get">
-                <input type="text" class="top_search_input" name="search" placeholder="Search for something here:">
-              </form>
-            </div>
+            <a class="quicklinks" href="#">Quicklinks</a>
+            <a class="city_select" href="#">Select from dropdown</a>
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <input type="text" class="top_search_input" name="search" placeholder="Search for something here">
+<!--              не понятно, что в поиске: кнопка или просто иконка-->
+            </form>
           </div>
         </div>
+<!--         как сделать в навигации увеличение обводки внутрь-->
         <nav class="header_nav">
           <ul>
-            <li><a href="#">Travel Guide</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">The Tour</a></li>
-            <li><a href="#">How to</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a class="nav_guide" href="#">Travel Guide</a></li>
+            <li><a class="nav_services" href="#">Services</a></li>
+            <li><a class="nav_about" href="#">About</a></li>
+            <li><a class="nav_tour" href="#">The Tour</a></li>
+            <li><a class="nav_howto" href="#">How to</a></li>
+            <li><a class="nav_contact" href="#">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -38,7 +37,7 @@
     <main>
       <section class="company_about">
         <div class="main_slider">
-
+          <a class="main_slider_btn" href="#"><img src="img/mainslider_btn.png"></img></a>
         </div>
         <div class="advantages_block">
           <div class="container">
@@ -46,11 +45,10 @@
               <h2>Anywhere, anytime, where here to help.</h2>
               <span>And we mean that</span>
             </div>
-            <img src="img/map.png">
-            <img src="img/advantages.png">
+<!--            <img src="img/map.png">-->
             <div class="advantages">
-              <div class="advantages_item">
-                <div class="advantages_item_title">Save Time</div>
+              <div class="advantages_time">
+                <h3 class="advantages_item_title">Save Time</h3>
                 <p>
                   Lets throw a trackie dacks also it'll be gutta. You little ripper avos flamin lets throw a lizard drinking.
                   Gutful of jug where as busy as a big smoke. Grab us a billy as cunning as a bull bar.
@@ -60,16 +58,16 @@
                   As cross as a no dramas as cunning as a barrack.
                 </p>
               </div>
-              <div class="advantages_item">
-                <div class="advantages_item_title">Win over the team</div>
+              <div class="advantages_team">
+                <h3 class="advantages_item_title">Win over the team</h3>
                 <p>
                   As cunning as a bonzer flamin as stands out like cubby house. As cross as a mate no dramas as cunning as a bonzer.
                   Gutful of kindie flamin as cross as a grundies. Lets throw a strides also as cross as a thingo.
                   Built like a old fella no dramas grab us a ten clicks away.
                 </p>
               </div>
-              <div class="advantages_item">
-                <div class="advantages_item_title">Design features</div>
+              <div class="advantages_design">
+                <h3 class="advantages_item_title">Design features</h3>
                 <p>
                   Built like a old fella no dramas grab us a ten clicks away. Lets get some digger when she'll be right metho.
                   As cross as a no dramas as cunning as a barrack.
@@ -80,9 +78,9 @@
             </div>
           </div>
         </div>
-        <div class="screen">
-          <div class="container">
-            <img src="img/advantages_big.png" alt="">
+        <div class="screen_block">
+          <div class="screen">
+<!--            <img src="img/advantages_big.png" alt="">-->
             <div class="title">
               <h2>A simple begining lead to big ideas</h2>
               <span>We started small but grew quickly.</span>
@@ -99,47 +97,57 @@
           <div class="team_slider">
             <div class="team_slider_items">
               <div class="team_slider_item">
-                <!-- не знаю каким образом реализовывать рамку вокруг картинки -->
+                <!-- каким образом реализовывать двойную рамку вокруг картинки -->
                 <div class="image">
-
+                  <img class="employee_image" src="img/josh_jansen.jpg" width="210" height="200" alt="">
+                  <a href="#"><img class="icon_twitter" src="img/icon_twitter.png" alt=""></a>
                 </div>
                 <div class="descr">
-                  <span class="name">Josh Jansen</span>
-                  <span class="job">Digital Producer</span>
+                  <div class="name">Josh Jansen</div>
+                  <div class="job">Digital Producer</div>
                 </div>
               </div>
               <div class="team_slider_item">
                 <div class="image">
-
+                  <img class="employee_image" src="img/blaz_robar.jpg" width="210" height="200" alt="">
+                  <a href="#"><img class="icon_twitter" src="img/icon_twitter.png" alt=""></a>
                 </div>
                 <div class="descr">
-                  <span class="name">Blaz Robar</span>
-                  <span class="job">Designer</span>
+                  <div class="name">Blaz Robar</div>
+                  <div class="job">Designer</div>
                 </div>
               </div>
               <div class="team_slider_item">
                 <div class="image">
-
+                  <img class="employee_image" src="img/james_brown.jpg" width="210" height="200" alt="">
+                  <a href="#"><img class="icon_twitter" src="img/icon_twitter.png" alt=""></a>
                 </div>
                 <div class="descr">
-                  <span class="name">James Brown</span>
-                  <span class="job">Developer</span>
+                  <div class="name">James Brown</div>
+                  <div class="job">Developer</div>
                 </div>
               </div>
               <div class="team_slider_item">
                 <div class="image">
-
+                  <img class="employee_image" src="img/skeletor.jpg" width="210" height="200" alt="">
+                  <a href="#"><img class="icon_twitter" src="img/icon_twitter.png" alt=""></a>
                 </div>
                 <div class="descr">
-                  <span class="name">Skeletor</span>
-                  <span class="job">Administration</span>
+                  <div class="name">Skeletor</div>
+                  <div class="job">Administration</div>
                 </div>
               </div>
             </div>
-            <div class="team_slider_nav">
-
+            <input type="radio" id="btn_1" name="toggle" checked>
+            <input type="radio" id="btn_2" name="toggle">
+            <input type="radio" id="btn_3" name="toggle">
+            <input type="radio" id="btn_4" name="toggle">
+            <div class="team_slider_controls">
+              <label for="btn_1"></label>
+              <label for="btn_2"></label>
+              <label for="btn_3"></label>
+              <label for="btn_4"></label>
             </div>
-
           </div>
           <div class="team_articles">
             <article class="team_article">
@@ -192,38 +200,40 @@
       </section>
       <footer>
         <div class="container">
-          <div class="footer_logo">
+          <div class="footer_flex">
+            <div class="footer_logo">
             <img src="img/footer_logo.png" alt="">
-          </div>
-          <div class="footer_nav">
-            <ul>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Staff</a></li>
-              <li><a href="#">Articles</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer_text">
-            Trent from punchy digger bloody gutful of mokkies. Get a dog up ya fair dinkum mate as cross as a flake.
-            Stands out like a bluey flamin stands out like a pot. As stands out like christmas to grab us a ugg boots.
-            She'll be right buckley's chance my as stands out like divvy van. It'll be smokes trent from punchy chewie.
-          </div>
-          <div class="footer_social">
-            <ul>
-              <li><a href="#"></a>Twitter</li>
-              <li><a href="#"></a>Facebook</li>
-              <li><a href="#"></a>RSS</li>
-              <li><a href="#"></a>Mail</li>
-            </ul>
-          </div>
-          <div class="footer_links">
-            <ul>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Footer links here</a></li>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Icons by http://www.dribbble.com/joshuaandrewdavies</a></li>
-            </ul>
+            </div>
+            <div class="footer_nav">
+              <ul>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Staff</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer_text">
+              Trent from punchy digger bloody gutful of mokkies. Get a dog up ya fair dinkum mate as cross as a flake.
+              Stands out like a bluey flamin stands out like a pot. As stands out like christmas to grab us a ugg boots.
+              She'll be right buckley's chance my as stands out like divvy van. It'll be smokes trent from punchy chewie.
+            </div>
+            <div class="footer_social">
+              <ul>
+                <li><a class="soc_twitter" href="#">Twitter</a></li>
+                <li><a class="soc_fb" href="#">Facebook</a></li>
+                <li><a class="soc_rss" href="#">RSS</a></li>
+                <li><a class="soc_mail" href="#">Mail</a></li>
+              </ul>
+            </div>
+            <div class="footer_links">
+              <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Footer links here</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Icons by http://www.dribbble.com/joshuaandrewdavies</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </footer>
