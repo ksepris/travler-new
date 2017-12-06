@@ -10,13 +10,15 @@ body{
 header{
   background-color: #ebebeb;
   padding-top: 40px;
-  height: 220px;
+  padding-bottom: 136px;
+/*  height: 220px;*/
 }
 
 .container{
   width: 942px;
   margin: 0 auto;
-  outline: 1px solid yellow;
+/*  outline: 1px solid yellow;*/
+  position: relative;
 }
 
 .header_search{
@@ -26,23 +28,26 @@ header{
 }
 
 .header_logo{
-  position: relative;
-  outline: 1px solid green;
+/*  position: relative;*/
+/*  outline: 1px solid green;*/
 }
 
 .search_block{
-  position: relative;
+/*  position: relative;*/
   width: 588px;
-  outline: 1px solid green;
+/*  outline: 1px solid green;*/
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .header_nav {
-  outline: 1px solid green;
-  margin-top: 40px;
-  z-index: 10;
+/*  outline: 1px solid green;*/
+/*  margin-top: 40px;*/
+/*  z-index: 10;*/
   position: absolute;
+  top: 86px;
+  z-index: 10;
 }
 
 
@@ -52,9 +57,11 @@ header{
   padding-left: 44px;
   padding-right: 43px;
   padding-top: 60px;
-  padding-bottom: 46px;
-  border-bottom: 5px solid #6017a3;
+  padding-bottom: 30px;
+  border-right: 1px solid #d4d4d4;
   background-color: #f9f9f9;
+  background: linear-gradient(to top, #d7d7d7, #ffffff);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.16); 
   display: block;
   text-decoration: none;
   font-size: 17px;
@@ -63,6 +70,7 @@ header{
   font-weight: bold;
   font-family: 'PTSans', sans-serif;
   position: relative;
+/*  box-sizing: border-box;*/
 }
 
 .nav_guide::before{
@@ -73,6 +81,14 @@ header{
   width: 26px;
   height: 26px;
   background-image: url(../img/icons/icon_travelguide.png);
+}
+
+.nav_guide{
+  border-bottom: 5px solid #6017a3;
+}
+
+.nav_guide:hover{
+  border-bottom: 13px solid #6017a3;
 }
 
 .nav_guide:hover::before{
@@ -89,6 +105,14 @@ header{
   background-image: url(../img/icons/icon_services.png);
 }
 
+.nav_services{
+  border-bottom: 5px solid #701dbb;
+}
+
+.nav_services:hover{
+  border-bottom: 13px solid #701dbb;
+}
+
 .nav_services:hover::before{
   background-image: url(../img/icons/icon_services_active.png);
 }
@@ -101,6 +125,14 @@ header{
   width: 21px;
   height: 26px;
   background-image: url(../img/icons/icon_about.png);
+}
+
+.nav_about{
+  border-bottom: 5px solid #8038c2;
+}
+
+.nav_about:hover{
+  border-bottom: 13px solid #8038c2;
 }
 
 .nav_about:hover::before{
@@ -117,6 +149,14 @@ header{
   background-image: url(../img/icons/icon_tour.png);
 }
 
+.nav_tour{
+  border-bottom: 5px solid #a34ff0;
+}
+
+.nav_tour:hover{
+  border-bottom: 13px solid #a34ff0;
+}
+
 .nav_tour:hover::before{
   background-image: url(../img/icons/icon_tour_active.png);
 }
@@ -129,6 +169,14 @@ header{
   width: 26px;
   height: 26px;
   background-image: url(../img/icons/icon_howto.png);
+}
+
+.nav_howto{
+  border-bottom: 5px solid #8038c2;
+}
+
+.nav_howto:hover{
+  border-bottom: 13px solid #8038c2;
 }
 
 .nav_howto:hover::before{
@@ -145,15 +193,28 @@ header{
   background-image: url(../img/icons/icon_contact.png);
 }
 
+.nav_contact{
+  border-bottom: 5px solid #701dbb;
+}
+
+.nav_contact:hover{
+  border-bottom: 13px solid #701dbb;
+}
+
 .nav_contact:hover::before{
   background-image: url(../img/icons/icon_contact_active.png);
 }
 
 .header_nav a:hover{
   color: #701dbb;
+  background: none;
   background-color: #ffffff;
-  border-bottom: 13px solid #6017a3;
 /*  padding-top: 70px;*/
+/*  box-sizing: border-box;*/
+/*  position: absolute;*/
+  top: -8px;
+  left: 0px;
+/*  box-sizing: border-box;*/
 }
 
 .search_block a{
@@ -209,13 +270,9 @@ header{
   list-style: none;
 }
 
-.header_nav ul:last-child{
-  border-right: none;
-}
 
-.header_nav li{
-  border-right: 1px solid #d4d4d4;
-}
+
+
 
 .search_block ul{
   margin: 0;
@@ -243,14 +300,14 @@ header{
 }
 
 .title{
-  outline: 1px solid green;
+/*  outline: 1px solid green;*/
   text-align: center;
   margin-bottom: 20px;
 }
 
 .advantages_block .title{
   position: relative;
-  margin-bottom: 214px;
+  margin-bottom: 234px;
 }
 
 .advantages_block .title::after{
@@ -277,6 +334,28 @@ header{
   position: relative;
 }
 
+.team .title::before{
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: 0px;
+  width: 220px;
+  height: 1px;
+  background-color: #dedede;
+  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 1); 
+}
+
+.team .title::after{
+  content: '';
+  position: absolute;
+  top: 36px;
+  right: 0px;
+  width: 220px;
+  height: 1px;
+  background-color: #dedede;
+  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 1); 
+}
+
 
 
 .title span{
@@ -290,7 +369,10 @@ header{
 
 .advantages_block {
   background-color: #2d2d2d;
+  border-top: 1px solid #5a5a5a;
 /*  padding-top: 9px;*/
+  padding-bottom: 90px;
+  padding-top: 20px;
 }
 
 .screen_block {
@@ -367,9 +449,29 @@ header{
   position: relative;
 }
 
+.advantages_time::after{
+  content: '';
+  position: absolute;
+  top: 46px;
+  left: 240px;
+  width: 140px;
+  height: 3px;
+  background: #6d6d6d;
+}
+
 .advantages_team {
   width: 300px;
   position: relative;
+}
+
+.advantages_team::after{
+  content: '';
+  position: absolute;
+  top: 46px;
+  left: 250px;
+  width: 140px;
+  height: 3px;
+  background: #6d6d6d;
 }
 
 .advantages_design {
@@ -379,6 +481,8 @@ header{
 
 .team {
   background-color: #ebebeb;
+  padding-bottom: 17px;
+  padding-top: 40px;
 }
 
 .team .title h2{
@@ -391,17 +495,23 @@ header{
 
 .employee_image{
   border: 5px solid #ffffff;
-  margin-bottom: 22px;
-}
-
-.team_slider_item .image{
   position: relative;
 }
 
+
+
+
+.team_slider_item .image{
+  position: relative;
+  margin-bottom: 16px;
+}
+
+
+
 .icon_twitter{
   position: absolute;
-  bottom: 35px;
-  right: 5px;
+  top: 164px;
+  left: 168px;
 }
 
 .team_slider_item .name {
@@ -440,7 +550,7 @@ header{
 .team_slider_controls{
   position: absolute;
   top: 315px;
-  left: 436px;
+  left: 446px;
 /*  margin-left:100px;*/
   text-align:center;
 }
@@ -482,11 +592,29 @@ footer {
   display: block;
   text-decoration: none;
   font-size: 12px;
-  line-height: 50px;
+  line-height: 12px;
   color: #ffffff;
   font-weight: bold;
   font-family: 'Nexa', sans-serif;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
 }
+
+.footer_nav a::before{
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 11px;
+  top: 15px;
+  left: -22px;
+  background-color: #767676;
+}
+
+.footer_nav .footer_nav_first::before{
+  display: none;
+}
+
 
 .footer_nav a:hover{
   border-bottom: 4px solid #914dcf;
@@ -526,8 +654,8 @@ footer {
 
 .footer_social {
   margin-top: 36px;
-  margin-left: 84px;
-  width: 300px;
+  margin-left: 96px;
+  width: 292px;
 }
 
 .footer_social a{
@@ -624,6 +752,32 @@ footer {
   border: none;
   background-color: #ffffff;
   outline: none;
+  position: relative;
+  z-index: 5;
+}
+
+/*
+.top_search_input::after{
+  z-index: 10;
+  content: '';
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 23px;
+  height: 23px;
+  background-image: url(../img/icons/icon_clock.png);
+}
+*/
+
+.top_search_label:before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 23px;
+  height: 23px;
+  background: url(../img/icons/icon_clock.png);
+  z-index: 10;
 }
 
 
@@ -632,14 +786,84 @@ footer {
   width: 1550px;
   height: 537px;
   background-image: url(../img/mainslider_img1.png);
-/*  text-align: center;*/
-  position: relative;
-  z-index: 5;
 }
 
 .main_slider_btn {
-  display: block;
+  width: 138px;
+  height: 138px;
   position: absolute;
-  left: 704px;
-  top: 194px;
+  top: 58%;
+  left: 50%;
+  margin: -69px 0 0 -69px;
+  display: block;
+}
+
+.image_frame {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 210px;
+  height: 200px;
+  background: #ffffff;
+  border: 5px solid #ffffff;
+  transform: rotate(-3deg);
+}
+
+.team_article {
+  width: 360px;
+  background-color: #ffffff;
+  padding-top: 56px;
+  padding-bottom: 96px;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 1); 
+  margin-bottom: 17px;
+  position: relative;
+}
+
+.team_article h1{
+  font-size: 30px;
+  line-height: 30px;
+  color: #252525;
+  font-weight: bold;
+  font-family: 'Nexa', sans-serif;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.team_articles {
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.team_article:last-child{
+  width: 940px;
+}
+
+.team_article .content {
+  font-size: 12px;
+  line-height: 22px;
+  color: #949494;
+  font-weight: normal;
+  font-family: 'Nexa', sans-serif;
+}
+
+.team_article a{
+  font-size: 14px;
+  line-height: 25px;
+  color: #6017a3;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 40px;
+}
+
+
+
+.plus_btn {
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
